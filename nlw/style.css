@@ -1,0 +1,29 @@
+
+:root {
+  font-size: 62.5%; /* 1rem = 10px */
+
+  /* Primary colors */
+  --primary-brand-green: #00856f;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  color: var(--primary-brand-green);
+}
+
+h1 {
+  font-size: 3.025rem;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+button {
+  background: var(--primary-brand-green);
+}
