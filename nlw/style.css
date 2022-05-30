@@ -3,27 +3,38 @@
   font-size: 62.5%; /* 1rem = 10px */
 
   /* Primary colors */
-  --primary-brand-green: #00856f;
+  --primary-color: hsl(170, 100%, 26%);
+  --secondary-color-headline: hsl(210, 11%, 15%);
+  --secondary-color-paragraph: hsl(210, 9%, 31%);
+  --secondary-color-white: hsl(0, 0%, 100%);
 }
 
 body {
   font-family: 'DM Sans', sans-serif;
   font-size: 1.6rem;
+
+  text-align: center;
 }
 
 h4 {
   font-size: 1.25rem;
-  color: var(--primary-brand-green);
+  color: var(--primary-color);
 }
 
 h1 {
   font-size: 3.025rem;
+  color: var(--secondary-color-headline);
+  line-height: 130%;
 }
 
 p {
   font-size: 1.6rem;
+  line-height: 150%;
+  color: var(--secondary-color-paragraph);
 }
 
 button {
-  background: var(--primary-brand-green);
+  background: var(--primary-color);
+  border: none;
+  border-radius: 1.5rem;
 }
