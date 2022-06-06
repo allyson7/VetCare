@@ -1,3 +1,5 @@
+/* GERAL RESET */
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -6,8 +8,11 @@
 :root {
   font-size: 62.5%; /* 1rem = 10px */
 
+  --nav-height: 7.2rem;
+
   /* Primary colors */
   --primary-color-brand-green: hsl(170, 100%, 26%);
+  --primary-color-brand-light-green: hsl(148, 23%, 89%);
   --secondary-color-headline: hsl(210, 11%, 15%);
   --secondary-color-paragraph: hsl(210, 9%, 31%);
   --secondary-color-white: hsl(0, 0%, 100%);
@@ -22,32 +27,53 @@ body {
   text-align: center;
 }
 
-header {
+.wrapper {
   width: 37.5rem;
-  margin: 4.1rem auto 1.6rem;
+  margin-inline: auto;
+  padding-inline: 2.4rem;
 }
 
-h4 {
+/* HEADER */
+
+header {
+  margin-top: calc(4.1rem + var(--nav-height));
+}
+
+header::before {
+  content: "";
+  width: 100vw;
+  height: calc(114rem + var(--nav-height));
+  /* height: 108rem; */
+  background-color: var(--primary-color-brand-light-green);
+  display: block;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+header h4 {
   font-size: 1.4rem;
   color: var(--primary-color-brand-green);
   margin-bottom: 1.6rem;
 }
 
-h1 {
+header h1 {
   font-size: 3.4rem;
   color: var(--secondary-color-headline);
   line-height: 130%;
   margin-bottom: 4.1rem;
 }
 
-p {
+header p {
   font-size: 1.8rem;
   line-height: 150%;
   color: var(--secondary-color-paragraph);
   margin-bottom: 3.2rem;
 }
 
-button {
+header button {
   width: 263px;
   height: 52px;
   border: none;
@@ -66,10 +92,54 @@ button {
   gap: 1.6rem;
 }
 
-.stats {
+header img {
+  width: 26.4rem;
+  display: block;
+  margin-inline: auto;
+}
+
+header .stats {
   width: 32.7rem;
-  height: 47rem;
+
+  padding-block: 4rem;
 
   margin-inline: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6rem;
+
   background: var(--primary-color-brand-beige);
+  border: 1px solid var(--primary-color-brand-light-green);
+  border-radius: 0.6rem;
+}
+
+.stat h3 {
+  font-size: 4.8rem;
+  color: var(--secondary-color-headline);
+  line-height: 130%;
+
+  margin-bottom: 0.4rem;
+}
+
+.stat p {
+  margin: 0;
+  color: var(--primary-color-brand-green);
+  line-height: 150%;
+}
+
+/* NAVIGATION */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: var(--nav-height);
+
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
