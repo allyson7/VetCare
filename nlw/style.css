@@ -163,6 +163,10 @@ nav .wrapper {
   justify-content: space-between;
 }
 
+.logo {
+  padding-right: 3.6rem;
+}
+
 nav.scroll {
   background: var(--primary-color-brand-green);
   width: 100vw;
@@ -279,4 +283,15 @@ body.menu-expanded .logo path {
 
 body.menu-expanded button path {
   stroke: white;
+}
+
+/* SERVICES */
+
+#services header h4 {
+  font-size: 1.4rem;
+  line-height: 150%;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
 }

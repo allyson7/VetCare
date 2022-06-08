@@ -149,7 +149,12 @@
           </ul>
         </div>
 
-        <button class="open-menu" onclick="openMenu()">
+        <button
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          class="open-menu"
+          onclick="openMenu()"
+        >
           <svg
             width="40"
             height="40"
@@ -180,7 +185,12 @@
             />
           </svg>
         </button>
-        <button class="close-menu" onclick="closeMenu()">
+        <button
+          aria-expanded="true"
+          aria-label="Fechar menu"
+          onclick="closeMenu()"
+          class="close-menu"
+        >
           <svg
             width="40"
             height="40"
@@ -199,6 +209,7 @@
         </button>
       </div>
     </nav>
+
     <header class="wrapper">
       <h4>BOAS-VINDAS A VETCARE 👋</h4>
       <h1>Assistência veterinária simplificada para todos animais</h1>
@@ -243,56 +254,164 @@
     </header>
 
     <main>
-      <section>
-        <p>SERVIÇOS</p>
-        <h2>Como podemos ajudar seu bichinho à se sentir melhor?</h2>
-        <div>
-          <img src="./assets/icons/check.svg" alt="check" />
-          <span>Problemas digestivos</span>
-          <p>
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim.
-          </p>
-        </div>
-        <div>
-          <img src="./assets/icons/check.svg" alt="check" />
-          <span>Saúde Hormonal</span>
-          <p>
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim.
-          </p>
-        </div>
-        <div>
-          <img src="./assets/icons/check.svg" alt="check" />
-          <span>Bem-estar mental</span>
-          <p>
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim.
-          </p>
-        </div>
-        <div>
-          <img src="./assets/icons/check.svg" alt="check" />
-          <span>Cuidados Pediátricos</span>
-          <p>
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim.
-          </p>
-        </div>
-        <div>
-          <img src="./assets/icons/check.svg" alt="check" />
-          <span>Autoimune e Inflamação</span>
-          <p>
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim.
-          </p>
-        </div>
-        <div>
-          <img src="./assets/icons/check.svg" alt="check" />
-          <span>Saúde do Coração</span>
-          <p>
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim.
-          </p>
+      <section id="services">
+        <div class="wrapper">
+          <header>
+            <h4>SERVIÇOS</h4>
+            <h2>Como podemos ajudar seu bichinho à se sentir melhor?</h2>
+          </header>
+
+          <div class="cards">
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#00856F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <h3>Problemas digestivos</h3>
+              <p>
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim.
+              </p>
+            </div>
+
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#00856F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <h3>Saúde Hormonal</h3>
+              <p>
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim.
+              </p>
+            </div>
+
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#00856F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <h3>Bem-estar mental</h3>
+              <p>
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim.
+              </p>
+            </div>
+
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#00856F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <h3>Cuidados Pediátricos</h3>
+              <p>
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim.
+              </p>
+            </div>
+
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#00856F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <h3>Autoimune e Inflamação</h3>
+              <p>
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim.
+              </p>
+            </div>
+
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#00856F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <h3>Saúde do Coração</h3>
+              <p>
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
       <section>

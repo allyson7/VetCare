@@ -1,8 +1,10 @@
+const navigation = document.getElementById('navigation');
+
 function onScroll() {
   if (scrollY > 0) {
-    document.getElementById('navigation').classList.add("scroll");
+    navigation.classList.add("scroll");
   } else {
-    document.getElementById('navigation').classList.remove("scroll");
+    navigation.classList.remove("scroll");
   }
 }
 
