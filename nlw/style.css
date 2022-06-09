@@ -13,12 +13,18 @@
 
   /* Primary colors */
   --primary-color-brand-green: hsl(170, 100%, 26%);
-  --primary-color-brand-light-green: hsl(148, 23%, 89%);
+  --primary-color-brand-green-light: hsl(148, 23%, 89%);
+  --primary-color-brand-green-light-02: hsl(180, 14%, 97%);
+
   --secondary-color-headline: hsl(210, 11%, 15%);
   --secondary-color-paragraph: hsl(210, 9%, 31%);
   --secondary-color-white: hsl(0, 0%, 100%);
 
   --primary-color-brand-beige: hsl(39, 100%, 97%);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 html,
@@ -34,6 +40,7 @@ body {
   text-align: center;
 
   overflow: overlay;
+  background-color: var(--primary-color-brand-green-light-02);
 }
 
 .wrapper {
@@ -47,17 +54,21 @@ ul {
   padding-left: 0;
 }
 
-/* HEADER */
-
-header {
-  margin-top: calc(4.1rem + var(--nav-height));
+section {
+  padding-block: 10rem;
 }
 
-header::before {
+/* HOME */
+
+#home {
+  padding-top: calc(4.1rem + var(--nav-height));
+}
+
+#home::before {
   content: "";
   width: 100%;
   height: calc(114rem + var(--nav-height));
-  background-color: var(--primary-color-brand-light-green);
+  background-color: var(--primary-color-brand-green-light);
   display: block;
 
   position: absolute;
@@ -66,20 +77,20 @@ header::before {
   z-index: -1;
 }
 
-header h4 {
+#home h4 {
   font-size: 1.4rem;
   color: var(--primary-color-brand-green);
   margin-bottom: 1.6rem;
 }
 
-header h1 {
+#home h1 {
   font-size: 3.4rem;
   color: var(--secondary-color-headline);
   line-height: 130%;
   margin-bottom: 2.4rem;
 }
 
-header p {
+#home p {
   font-size: 1.8rem;
   line-height: 150%;
   font-weight: 400;
@@ -87,7 +98,7 @@ header p {
   margin-bottom: 3.2rem;
 }
 
-header button {
+#home button {
   width: 26.3rem;
   height: 5.2rem;
   border: none;
@@ -107,14 +118,14 @@ header button {
   gap: 1.6rem;
 }
 
-header img {
+#home img {
   width: 26.4rem;
   display: block;
   margin-inline: auto;
   object-position: 0 2rem;
 }
 
-header .stats {
+#home .stats {
   width: 32.7rem;
   padding-block: 4rem;
   margin-inline: auto;
@@ -125,11 +136,11 @@ header .stats {
   gap: 6rem;
 
   background: var(--primary-color-brand-beige);
-  border: 1px solid var(--primary-color-brand-light-green);
+  border: 1px solid var(--primary-color-brand-green-light);
   border-radius: 0.6rem;
 }
 
-.stat h3 {
+#home .stat h3 {
   font-size: 4.8rem;
   color: var(--secondary-color-headline);
   line-height: 130%;
@@ -137,7 +148,7 @@ header .stats {
   margin-bottom: 0.4rem;
 }
 
-.stat p {
+#home .stat p {
   margin: 0;
   color: var(--primary-color-brand-green);
   font-size: 1.6rem;
@@ -155,6 +166,8 @@ nav {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+
+  z-index: 100;
 }
 
 nav .wrapper {
@@ -213,6 +226,10 @@ body.menu-expanded .close-menu {
   visibility: visible;
 }
 
+.menu {
+  transform: translateY(100%);
+}
+
 body.menu-expanded .menu {
   position: fixed;
   top: 0;
@@ -223,6 +240,10 @@ body.menu-expanded .menu {
   height: 100vh;
 
   padding-top: var(--nav-height);
+
+  transition: transform 300ms;
+
+  transform: translateY(0);
 }
 
 body.menu-expanded nav {
@@ -290,8 +311,40 @@ body.menu-expanded button path {
 #services header h4 {
   font-size: 1.4rem;
   line-height: 150%;
+  letter-spacing: 0.08rem;
 
-  letter-spacing: 0.08em;
+  color: var(--primary-color-brand-green);
 
   text-transform: uppercase;
+
+  margin-bottom: 1.6rem;
+}
+
+#services header h2 {
+  font-size: 3rem;
+  line-height: 3.9rem;
+
+  color: var(--secondary-color-headline);
+
+  margin-bottom: 6rem;
+}
+
+#services .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+#services .card {
+  padding: 2.4rem;
+  text-align: left;
+
+  background: white;
+
+  border: 1px solid var(--primary-color-brand-green-light);
+  border-radius: 0.6rem;
+}
+
+#services .card h3 {
+  margin-block: 1.6rem;
 }
