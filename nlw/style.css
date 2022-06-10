@@ -54,6 +54,10 @@ ul {
   padding-left: 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 section {
   padding-block: 10rem;
 }
@@ -80,6 +84,17 @@ section header h4 {
   font-size: 1.4rem;
   color: var(--primary-color-brand-green);
   margin-bottom: 1.6rem;
+  letter-spacing: 0.08rem;
+
+  text-transform: uppercase;
+}
+
+section .content p {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+
+  color: var(--secondary-color-paragraph);
 }
 
 /* NAVIGATION */
@@ -337,6 +352,25 @@ body.menu-expanded button path {
 
 /* ABOUT */
 
+#about {
+  text-align: left;
+  background-color: var(--primary-color-brand-beige);
+}
+
+#about .wrapper {
+  padding-top: 10rem;
+}
+
 #about h2 {
   margin-bottom: 2.4rem;
+}
+
+#about .content p {
+  margin-top: 2.4rem;
+  margin-bottom: 6rem;
+}
+
+#about img {
+  width: 32.7rem;
+  border-radius: 2rem;
 }
