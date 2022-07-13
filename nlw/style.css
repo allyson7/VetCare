@@ -97,6 +97,28 @@ section .content p {
   color: var(--secondary-color-paragraph);
 }
 
+.button {
+  width: 26.3rem;
+  height: 5.2rem;
+  border: none;
+  border-radius: 4rem;
+  margin-bottom: 6rem;
+  margin-inline: auto;
+  background: var(--primary-color-brand-green);
+
+  font-size: 1.4rem;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+
+  text-decoration: none;
+}
+
 /* NAVIGATION */
 
 nav {
@@ -265,26 +287,6 @@ body.menu-expanded button path {
   font-weight: 400;
   color: var(--secondary-color-paragraph);
   margin-bottom: 3.2rem;
-}
-
-#home button {
-  width: 26.3rem;
-  height: 5.2rem;
-  border: none;
-  border-radius: 4rem;
-  margin-bottom: 6rem;
-  margin-inline: auto;
-  background: var(--primary-color-brand-green);
-
-  font-size: 1.4rem;
-  color: white;
-  text-transform: uppercase;
-  font-weight: 700;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.6rem;
 }
 
 #home img {
