@@ -13,6 +13,7 @@
 
   /* Primary colors */
   --primary-color-brand-green: hsl(170, 100%, 26%);
+  --primary-color-brand-green-hover: hsl(170, 100%, 14%);
   --primary-color-brand-green-light: hsl(148, 23%, 89%);
   --primary-color-brand-green-light-02: hsl(180, 14%, 97%);
 
@@ -98,13 +99,12 @@ section .content p {
 }
 
 .button {
-  width: 26.3rem;
-  height: 5.2rem;
+  width: fit-content;
   border: none;
   border-radius: 4rem;
   margin-bottom: 6rem;
-  margin-inline: auto;
   background: var(--primary-color-brand-green);
+  padding: 1.6rem 3.2rem;
 
   font-size: 1.4rem;
   color: white;
@@ -117,6 +117,19 @@ section .content p {
   gap: 1.6rem;
 
   text-decoration: none;
+
+  transition: background 200ms;
+}
+
+.button:hover {
+  background-color: var(--primary-color-brand-green-hover);
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
 }
 
 /* NAVIGATION */
@@ -240,13 +253,6 @@ body.menu-expanded .menu {
   margin-bottom: 8rem;
 }
 
-.social-links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3.2rem;
-}
-
 body.menu-expanded .logo,
 body.menu-expanded nav button {
   position: relative;
@@ -279,6 +285,10 @@ body.menu-expanded button path {
   top: 0;
   left: 0;
   z-index: -1;
+}
+
+#home .button {
+  margin-inline: auto;
 }
 
 #home p {
@@ -377,7 +387,7 @@ body.menu-expanded button path {
   border-radius: 2rem;
 }
 
-/* * CONTACT */
+/* CONTACT */
 
 #contact {
   text-align: left;
@@ -392,10 +402,64 @@ body.menu-expanded button path {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
+
+  margin-bottom: 3.2rem;
 }
 
 #contact ul li {
   display: flex;
   align-items: center;
   gap: 0.8rem;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: var(--primary-color-brand-green);
+  padding-block: 6rem;
+
+  text-align: left;
+  color: var(--primary-color-brand-beige);
+}
+
+footer .logo {
+  display: inline-block;
+  margin-bottom: 2.4rem;
+}
+
+footer .logo svg {
+  width: 16rem;
+  height: 3.1rem;
+}
+
+footer .logo path {
+  fill: white;
+}
+
+footer p {
+  line-height: 2;
+
+  margin-bottom: 3.2rem;
+}
+
+footer .social-links {
+  justify-content: flex-start;
+}
+
+/* BACK TO TOP */
+
+#backToTopButton {
+  position: fixed;
+  bottom: 1rem;
+  right: 2.5rem;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity 200ms;
+}
+
+#backToTopButton.show {
+  opacity: 1;
+  visibility: visible;
 }
