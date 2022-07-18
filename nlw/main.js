@@ -8,7 +8,10 @@ function onScroll() {
   showNavOnScroll();
   showBackToTopButtonOnScroll();
 
+  activateMenuAtCurrentSection(home);
   activateMenuAtCurrentSection(services);
+  activateMenuAtCurrentSection(about);
+  activateMenuAtCurrentSection(contact);
 }
 
 function activateMenuAtCurrentSection(section) {
@@ -16,22 +19,19 @@ function activateMenuAtCurrentSection(section) {
 
   const sectionTop = section.offsetTop;
   const sectionHeight = section.offsetHeight;
-
   const sectionTopReachOrPassedTargetLine = targetLine >= sectionTop;
 
-  console.log('topo passou da linha?', sectionTopReachOrPassedTargetLine ? 'sim' : '');
-
   const sectionEndsAt = sectionTop + sectionHeight;
-
   const sectionEndPassedTargetLine = sectionEndsAt <= targetLine;
 
   const sectionBoundaries = sectionTopReachOrPassedTargetLine && !sectionEndPassedTargetLine
 
   const sectionId = section.getAttribute('id');
-  const menuElement = document.querySelector(`.menu a [href*=${sectionId}]`);
+  const menuElement = document.querySelector(`.menu a[href*=${sectionId}]`)
 
+  menuElement.classList.remove('active');
   if (sectionBoundaries) {
-    menuElement.classList.add()
+    menuElement.classList.add('active');
   }
 }
 
@@ -72,5 +72,5 @@ ScrollReveal({
   #services .card,
   #about,
   #about header,
-  #abour .content`
+  #about .content`
 );
